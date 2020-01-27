@@ -1,14 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <title>Login</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="bs/css/bootstrap.min.css" rel="stylesheet">
-        <link href="bs/css/bootstrap-theme.min.css" rel="stylesheet">
-        <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
-        <script type="text/javascript" src="bs/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/bootstrap-select.js"></script>
     </head>
     <body>
-        <div class="container-fluid"> <!-- container fluid class renders the page as a responsive full-width design-->
+        <div class="container"> <!-- container fluid class renders the page as a responsive full-width design-->
+            <br/> <br/> <br/>
+            <form class="form-horizontal" action="#">
+                <div class="form-group">
+                    <label for="username" class="control-label col-sm-3">Username</label>
+                    <div class="col-sm-9">
+                        <div class="input-group">
+                            <span class="input-group-addon glyphicon glyphicon-user"></span>
+                            <input type="text" class="form-control" id="username" placeholder="enter username">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="control-label col-sm-3">Password</label>
+                    <div class="col-sm-9">
+                        <div class="input-group">
+                            <span class="input-group-addon glyphicon glyphicon-pencil"></span>
+                            <input type="password" class="form-control" id="password" placeholder="*****">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-9 col-sm-offset-3">
+                        <button type="submit" class="btn btn-primary btn-md">Login</button>
+                </div>
+            </form>
         </div>
+        
     </body>
 </html>

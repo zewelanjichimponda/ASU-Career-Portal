@@ -1,14 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <title>New Post</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="bs/css/bootstrap.min.css" rel="stylesheet">
-        <link href="bs/css/bootstrap-theme.min.css" rel="stylesheet">
-        <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
-        <script type="text/javascript" src="bs/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/bootstrap-select.js"></script>
     </head>
     <body>
-        <div class="container-fluid"> <!-- container fluid class renders the page as a responsive full-width design-->
+        <br/> <br/> <br/>
+        <div class="container"> <!-- container fluid class renders the page as a responsive full-width design-->
+            <form action="#" class="form-horizontal">
+                <div class="form-group">
+                    <label for="title" class="control-label col-sm-3">Job Title</label>
+                    <div class="col-sm-9">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1"></span>
+                            <input type="text" id="title" class="form-control" placeholder="job title" aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="company" class="control-label col-sm-3">Company/Organization</label>
+                    <div class="col-sm-9">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon2"></span>
+                            <input type="text" class="form-control" placeholder="Company/Organization Name" aria-describedby="basic-addon2">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="job_description" class="control-label col-sm-3">Job Description</label>
+                    <div class="col-sm-9">
+                        <div class="input-group">
+                            <span class="input-group-addon"></span>
+                            <textarea class="form-control" id="job_description" placeholder="enter job description" rows="5"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="type" class="control-label col-sm-3">Job Type</label>
+                    <div class="col-sm-9">
+                        <div class="custom-control custom-radio" id="type">
+                            <input type="radio" class="custom-control-input" id="internship" name="type">
+                            <label class="custom-control-label" for="internship">Internship</label>
+                            <input type="radio" class="custom-control-input" id="fulltime" name="type">
+                            <label class="custom-control-label" for="fulltime">fulltime</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- put code to omit the next section if job tyoe is fulltime-->
+                <div class="form-group">
+                    <label for="duration" class="control-label col-sm-3">Duration(weeks)</label>
+                    <div class="col-sm-9">
+                        <div class="input-group">
+                            <select class="selectpicker form-control" id="duration" data-live-search="true">
+                                <option data-tokens="1 one">1 week</option>
+                                <option data-tokens="2 two">2 weeks</option>
+                                <option data-tokens="3 three">3 weeks</option>
+                                <option data-tokens="4 four">4 weeks</option>
+                                <option data-tokens="5 five">5 weeks</option>
+                                <option data-tokens="6 six">6 weeks</option>
+                                <option data-tokens="7 seven">7 weeks</option>
+                                <option data-tokens="8 eight">8 weeks</option>
+                                <option data-tokens="9 nine">9 weeks</option>
+                                <option data-tokens="10 ten">10 weeks</option>
+                                <option data-tokens="11 eleven">11 weeks</option>
+                                <option data-tokens="12 twelve">12 weeks</option>
+                                <option data-tokens="13 thirteen">13 weeks</option>
+                                <option data-tokens="14 fourteen">14 weeks</option>
+                                <option data-tokens="15 fifteen">15 weeks</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="deadline" class="control-label col-sm-3">Application Deadline</label>
+                    <div class="col-sm-9">
+                        <div class="input-group">
+                            <span class="input-group-addon"></span>
+                            <input type="date" class="form-control" id="deadline">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="link" class="control-label col-sm-3">Application Link</label>
+                    <div class="col-sm-9">
+                        <div class="input-group">
+                            <span class="input-group-addon"></span>
+                            <input type="url" class="form-control" id="link" placeholder="paste application url">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-9 col-sm-offset-3">
+                        <button type="submit" class="btn btn-primary btn-md">Post</button>
+                </div>
+            </form>
         </div>
     </body>
 </html>
